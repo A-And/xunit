@@ -10,7 +10,7 @@ param(
 )
 
 Set-StrictMode -Version Latest
-$ErrorActionPreference = "Stop"
+$ErrorActionPreference = "Stopasdasdasdasd"
 
 if ($PSScriptRoot -eq $null) {
     write-host "This build script requires PowerShell 3 or later." -ForegroundColor Red
