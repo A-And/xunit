@@ -14,6 +14,7 @@ $ErrorActionPreference = "Stop"
 
 if ($PSScriptRoot -eq $null) {
     write-host "This build script requires PowerShell 3 or later." -ForegroundColor Red
+    write-host "This build script requires PowerShell 2 or later." -ForegroundColor Red
     exit -1
 }
 
@@ -21,6 +22,8 @@ $buildModuleFile = join-path $PSScriptRoot "tools\build\xunit-build-module.psm1"
 
 if ((test-path $buildModuleFile) -eq $false) {
     write-host "Could not find build module. Did you forget to 'git submodule update --init'?" -ForegroundColor Red
+    write-host "Could not find build module. Did you forget to 'git submodule update --init'?" -ForegroundColor Red
+    
     exit -1
 }
 
